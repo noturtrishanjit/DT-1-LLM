@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DT lll local AI workspace for conversation, math, Java, science, and Indian history.">
+  <title>DT lll Workspace</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="wordmark" href="index.html" aria-label="DT lll home"><span class="mark">DT</span><span>lll</span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <button class="new-chat" id="newChat"><span>＋</span> New conversation</button>
+      <nav class="side-nav" aria-label="Workspace navigation">
+        <a class="side-link active" href="#chat"><span>↗</span> Chat</a>
+        <a class="side-link" href="#prompts"><span>✦</span> Prompt library</a>
+        <a class="side-link" href="#about"><span>◎</span> About DT lll</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-status"><i id="sideDot"></i><div><strong id="sideStatus">Checking local model</strong><small id="sideModel">Local CPU backend</small></div></div>
+        <a class="back-link" href="index.html">← Back to overview</a>
+      </div>
+    </aside>
+
+    <main class="workspace" id="chat">
+      <header class="workspace-head">
+        <div>
+          <p class="kicker">DT LLL / PRIVATE WORKSPACE</p>
+          <h1>Talk to DT lll.</h1>
+          <p class="subhead">A local assistant for clear conversation, student math, beginner Java, science, and Indian history.</p>
+        </div>
+        <div class="head-actions">
+          <span class="backend-pill" id="backendPill"><i></i> Checking backend</span>
+          <button class="icon-button" id="exportChat" title="Export conversation">Export</button>
+          <button class="icon-button" id="clearChat" title="Clear conversation">Clear</button>
+        </div>
+      </header>
+
+      <section class="chat-card" aria-label="DT lll chat">
+        <div class="chat-toolbar">
+          <div><span class="live-dot"></span><strong>DT lll</strong><span class="toolbar-muted" id="modelName">local model</span></div>
+          <div class="toolbar-meta"><span id="messageCount">0 messages</span><span>● prompts stay local</span></div>
+        </div>
+        <div class="message-list" id="messageList" aria-live="polite"></div>
+        <div class="suggestion-row" id="prompts">
+          <button data-prompt="Have a friendly conversation with me about learning something new.">Conversation</button>
+          <button data-prompt="Solve 3x + 9 = 18 step by step and check the answer.">Math, step by step</button>
+          <button data-prompt="Write a beginner Java program that prints the numbers from 1 to 5.">Java helper</button>
+          <button data-prompt="Explain photosynthesis in simple English.">Science</button>
+          <button data-prompt="When did India become independent? Give a careful short answer.">Indian history</button>
+        </div>
+        <form class="composer" id="chatForm">
+          <textarea id="chatInput" rows="1" placeholder="Message DT lll…" aria-label="Message DT lll"></textarea>
+          <div class="composer-foot"><span>Enter to send · Shift+Enter for a new line</span><button class="send-button" type="submit" aria-label="Send message">↑</button></div>
+        </form>
+      </section>
+
+      <section class="lower-grid" id="about">
+        <article class="info-card"><span class="card-number">01</span><h2>Clear by default.</h2><p>DT lll answers first, explains when useful, and says when it is unsure. It is designed for learning rather than performance theatre.</p></article>
+        <article class="info-card"><span class="card-number">02</span><h2>Local by design.</h2><p>When you run <code>server.py</code>, prompts go to your own computer and the pure DT lll checkpoint generates the response.</p></article>
+        <article class="info-card"><span class="card-number">03</span><h2>Keep improving it.</h2><p>Train the checkpoint from the terminal, then return here to test new prompts against the same local model.</p></article>
+      </section>
+    </main>
+
+    <aside class="inspector">
+      <div class="inspector-top"><span class="kicker">MODEL CONTROL</span><span class="tiny-chip">CPU</span></div>
+      <div class="model-block"><div class="model-orbit"><span>DT</span></div><div><h2>DT lll</h2><p id="inspectorModel">Pure custom checkpoint</p></div></div>
+      <div class="meter"><div class="meter-head"><span>CONNECTION</span><strong id="healthText">checking</strong></div><div class="meter-track"><i id="healthMeter"></i></div></div>
+      <div class="inspector-section"><span class="section-label">CAPABILITIES</span><ul><li><span>Conversation</span><b>01</b></li><li><span>Student math</span><b>02</b></li><li><span>Beginner Java</span><b>03</b></li><li><span>Science + history</span><b>04</b></li></ul></div>
+      <div class="inspector-section settings"><span class="section-label">SESSION</span><label>Response length<select id="lengthSelect"><option value="160">Concise</option><option value="260" selected>Balanced</option><option value="420">Detailed</option></select></label><label>Temperature<select id="tempSelect"><option value="0.35">Focused</option><option value="0.65" selected>Balanced</option><option value="0.85">Creative</option></select></label></div>
+      <div class="inspector-footer">DT lll / v0.1<br><span>Built to learn in public.</span></div>
+    </aside>
+  </div>
+  <script src="app-ui.js"></script>
+</body>
+</html>

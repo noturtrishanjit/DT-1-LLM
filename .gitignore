@@ -1,0 +1,35 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Local model artifacts and training outputs
+checkpoints/*.pt
+checkpoints/*.pth
+checkpoints/*.bin
+checkpoints/*.safetensors
+checkpoints/*.gguf
+checkpoints/*.log
+checkpoints/*.txt
+checkpoints/*.json
+
+# Generated combined datasets and local run output
+data/all_subjects_train.jsonl
+data/all_subjects_eval.jsonl
+*.log
+*.tmp
+
+# Operating-system/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Local Manus/development state
+.manus/
+.manus-webdev/

@@ -1,0 +1,6 @@
+{"kind": "math", "prompt": "Solve 11x + 22 = 99 step by step.", "answer": "x = 7"}
+{"kind": "math", "prompt": "What is 15 percent of 240? Show the calculation.", "answer": "36"}
+{"kind": "math", "prompt": "There are 13 boxes with 6 books in each box. How many books are there?", "answer": "78"}
+{"kind": "java", "prompt": "Write a complete Java program that prints the numbers from 1 to 9.", "answer": "i <= 9"}
+{"kind": "java", "prompt": "Why does a Java for loop use i++?", "answer": "increases i"}
+{"kind": "chat", "prompt": "What should you do when unsure?", "answer": "unsure"}

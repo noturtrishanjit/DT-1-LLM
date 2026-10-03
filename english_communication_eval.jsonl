@@ -1,0 +1,5 @@
+{"kind": "vocabulary", "prompt": "What does the word curious mean?", "answer": "curious"}
+{"kind": "grammar", "prompt": "Correct this sentence: he go to work every day.", "answer": "goes"}
+{"kind": "conversation", "prompt": "I do not understand this.", "answer": "one step"}
+{"kind": "writing", "prompt": "Make this polite: \"check the code\".", "answer": "please"}
+{"kind": "conversation", "prompt": "What if you do not know the answer?", "answer": "unsure"}

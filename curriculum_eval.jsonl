@@ -1,0 +1,5 @@
+{"kind": "math", "prompt": "Solve 7x - 14 = 35 step by step.", "answer": "x = 7"}
+{"kind": "math", "prompt": "There are 9 boxes with 7 pencils each. How many pencils are there? Show the calculation.", "answer": "63"}
+{"kind": "java", "prompt": "Write a Java loop that prints the numbers 1 to 7.", "answer": "i <= 7"}
+{"kind": "java", "prompt": "Write Java code to calculate the sum from 1 to 9.", "answer": "sum += i"}
+{"kind": "chat", "prompt": "What are you?", "answer": "DT lll"}
